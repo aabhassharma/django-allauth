@@ -1,8 +1,15 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
 
-You're receiving this e-mail because user {{ user_display }} at {{ site_domain }} has given yours as an e-mail address to connect their account.
+HesokuriApp makes saving seamless.  For every dollar you spend, we will automatically set aside a proportion of your spending, pre-determined by you! You can save for a major purchase, goal or for the future!
 
-To confirm this is correct, go to {{ activate_url }}
+To confirm that this is your email address, please go to:
+{{ activate_url }}
+
+Stay tuned for our updates!
+
+Thanks!
+
+The HesokuriApp Team
 {% endblocktrans %}{% endautoescape %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
 {{ site_domain }}{% endblocktrans %}
