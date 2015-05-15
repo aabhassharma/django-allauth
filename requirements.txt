@@ -7,7 +7,6 @@ Unidecode==0.04.17
 awsebcli==3.1.2
 basicauth==0.2
 cement==2.4.0
--e git+https://github.com/aabhassharma/django-allauth.git@ec0bf58d9ab4b1c4d5133e8a4c90bcce6a52cbb3#egg=django_allauth-master
 django-braces==1.4.0
 django-debug-toolbar==1.2.2
 django-facebook==6.0.2
