@@ -7,12 +7,14 @@
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<CENTER><img src="http://yuhiyanagisawa.com/logo.jpg" alt="logo" width="600" height="400"></CENTER>
+
+<center><h1>{% trans "Sign In" %}</h1></center>
 
 {% if socialaccount.providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
+<!--<p>{% blocktrans with site.name as site_name %}Please sign in with one
 of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+for a {{ site_name }} account and sign in below:{% endblocktrans %}</p> 
 
 <div class="socialaccount_ballot">
 
@@ -22,16 +24,16 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
   <div class="login-or">{% trans 'or' %}</div>
 
-</div>
+</div> -->
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<center><p>{% blocktrans %}If you have not created an account yet, then please
+<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p></center>
 {% endif %}
 
-<form class="login" method="POST" action="{% url 'account_login' %}">
+<center><form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}
@@ -39,6 +41,6 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% endif %}
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
+</form></center>
 
 {% endblock %}
